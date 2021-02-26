@@ -86,7 +86,7 @@ inquirer.prompt([
   {
     type: 'input',
     name: 'managerOfficeNumber',
-    message: 'What is the Managers office number?',
+    message: 'What is the Managers office number? (no dashes)',
     validate: (input) => {
       if (isNaN(input))
         return "Please enter office number!"
@@ -308,14 +308,14 @@ function createManagerCard(manager) {
       </div>
       <div class="media-content">
         <p class="title is-4"> Manager <i class="fas fa-sitemap"></i></p>
-        <p class="subtitle is-6">${manager.name}</p>
+        <p class="subtitle">${manager.name}</p>
       </div>
     </div>
   
     <div class="content">
-      <p>Employee ID: ${manager.id}</p>
-      <a target="_blank" href="mailto:${manager.email}">${manager.email}</a>
-      <p>Office Number: ${manager.officeNumber.slice(0, 3) + "-" + manager.officeNumber.slice(3, 6) + "-" + manager.officeNumber.slice(6)}</p>
+      <p class="details">Employee ID: ${manager.id}</p>
+      <p class="details">Office Number: ${manager.officeNumber.slice(0, 3) + "-" + manager.officeNumber.slice(3, 6) + "-" + manager.officeNumber.slice(6)}</p>
+      <a class="details" target="_blank" href="mailto:${manager.email}">${manager.email}</a>
     </div>
   </div>
   </div>`
@@ -340,14 +340,14 @@ function buildEngineerCard(engineer) {
       </div>
       <div class="media-content">
         <p class="title is-4">Engineer <i class="fas fa-briefcase"></i></p>
-        <p class="subtitle is-6">${engineer.name}</p>
+        <p class="subtitle">${engineer.name}</p>
       </div>
     </div>
   
     <div class="content">
-      <p>Employee ID: ${engineer.id}</p>
-      <a target="_blank" href="mailto:${engineer.email}">${engineer.email}</a>
-      <p> <a target="_blank" href="https://github.com/${engineer.github}">Github</a></p>
+      <p class="details">Employee ID: ${engineer.id}</p>
+      <p> <a class="details" target="_blank" href="https://github.com/${engineer.github}"><i class="fab fa-github-square"></i>Github</a></p>
+      <a class="details" target="_blank" href="mailto:${engineer.email}">${engineer.email}</a>
     </div>
   </div>
   </div>`
@@ -372,14 +372,14 @@ function buildInternCard(intern) {
       </div>
       <div class="media-content">
         <p class="title is-4">Intern <i class="fas fa-briefcase"></i></p>
-        <p class="subtitle is-6">${intern.name}</p>
+        <p class="subtitle">${intern.name}</p>
       </div>
     </div>
   
     <div class="content">
-      <p>Employee ID: ${intern.id}</p>
-      <a target="_blank" href="mailto:${intern.email}">${intern.email}</a>
-      <p>School: ${intern.school}</p>
+      <p class="details">Employee ID: ${intern.id}</p>
+      <p class="details"><i class="fas fa-university"></i>  ${intern.school}</p>
+      <a class="details" target="_blank" href="mailto:${intern.email}">${intern.email}</a>
     </div>
   </div>
   </div>`

@@ -1,5 +1,5 @@
 .body {  
- background-color: #7c0000 !important;
+ background-color: #f30000 !important;
 
 }
 
@@ -7,13 +7,29 @@
     font-family: fantasy;
     color: white;
     background-color: black;
-    padding: 5px;
-    border-radius: 5%;
+    padding: 8px;
+    font-weight: bold;
+  
+
+}
+.subtitle {
+    font-size: 30px;
+    padding: 3px;
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.id{
+    color: black;
+    font-weight: bold;
 }
 
+.details{
+    color: black;
+    font-weight: bold;
+}
 .card {
-    background-color: #01afff !important;
+    background-color: #00F5F5 !important;
     color: white;
-    font-family: fantasy;
-  
+    font-family: fantasy;  
 }
