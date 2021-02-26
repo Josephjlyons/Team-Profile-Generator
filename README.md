@@ -1,8 +1,8 @@
 # Team-Profile-Generator
 
-![image of card](./assests/employee-card.png)
-![image of test](./assests/tests.png) 
-![image of prompts](./assests/prompts.png) 
+![image of card](./assets/employee-card.png)
+![image of test](./assets/tests.png) 
+![image of prompts](./assets/prompts.png) 
 
 ## Application Video Walkthrough
 
