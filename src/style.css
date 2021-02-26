@@ -1,0 +1,19 @@
+.body {  
+ background-color: #7c0000 !important;
+
+}
+
+.title{
+    font-family: fantasy;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+.card {
+    background-color: #01afff !important;
+    color: white;
+    font-family: fantasy;
+  
+}
