@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const Employee = require('./lib/Employee'); // might not need this? 
+// const htmlbuild = require('./src/htmlbuild.js')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -254,7 +254,7 @@ const buildHTMLPage = () =>
   <body class="body">
     <section class="hero is-small is-primary mb-3 has-background-black">
       <div class="hero-body">
-        <h1 class="title has-text-centered">
+        <h1 class="title has-text-centered"><i class="fas fa-users"></i>
         The Team
         </h1>
       </div>
@@ -313,7 +313,7 @@ function createManagerCard(manager) {
     </div>
   
     <div class="content">
-      <p class="details">Employee ID: ${manager.id}</p>
+      <p class="details">Employee ID: #${manager.id}</p>
       <p class="details">Office Number: ${manager.officeNumber.slice(0, 3) + "-" + manager.officeNumber.slice(3, 6) + "-" + manager.officeNumber.slice(6)}</p>
       <a class="details" target="_blank" href="mailto:${manager.email}">${manager.email}</a>
     </div>
@@ -345,7 +345,7 @@ function buildEngineerCard(engineer) {
     </div>
   
     <div class="content">
-      <p class="details">Employee ID: ${engineer.id}</p>
+      <p class="details">Employee ID: #${engineer.id}</p>
       <p> <a class="details" target="_blank" href="https://github.com/${engineer.github}"><i class="fab fa-github-square"></i>Github</a></p>
       <a class="details" target="_blank" href="mailto:${engineer.email}">${engineer.email}</a>
     </div>
@@ -371,13 +371,13 @@ function buildInternCard(intern) {
       <div class="media-left">
       </div>
       <div class="media-content">
-        <p class="title is-4">Intern <i class="fas fa-briefcase"></i></p>
+        <p class="title is-4">Intern <i class="fas fa-clipboard"></i></p>
         <p class="subtitle">${intern.name}</p>
       </div>
     </div>
   
     <div class="content">
-      <p class="details">Employee ID: ${intern.id}</p>
+      <p class="details">Employee ID: #${intern.id}</p>
       <p class="details"><i class="fas fa-university"></i>  ${intern.school}</p>
       <a class="details" target="_blank" href="mailto:${intern.email}">${intern.email}</a>
     </div>
