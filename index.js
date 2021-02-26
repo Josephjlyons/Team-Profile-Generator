@@ -52,7 +52,7 @@ inquirer.prompt([
     name: 'managerName',
     message: 'What is the Manager name?',
     validate: (input) => {
-      if (input.length > 2)
+      if (input.length > 1)
         return true;
 
       return "Please enter a valid name!"
@@ -76,14 +76,11 @@ inquirer.prompt([
     name: 'managerEmail',
     message: 'What is the Manager email?',
     validate: (input) => {
-      
-        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input)) {
-          return (true)
-        }
-        return "You have entered an invalid email address!"
-        
-      
 
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input)) {
+        return (true)
+      }
+      return "You have entered an invalid email address!"
     }
   },
   {
@@ -118,22 +115,50 @@ promptEngineer = () => {
     {
       type: 'input',
       name: 'engineerName',
-      message: 'What is the Engineers name?'
+      message: 'What is the Engineers name?',
+      validate: (input) => {
+        if (input.length > 1)
+          return true;
+
+        return "Please enter a valid name!"
+
+      }
     },
     {
       type: 'input',
       name: 'engineerId',
-      message: 'What is the Engineers Id?'
+      message: 'What is the Engineers Id?',
+      validate: (number) => {
+        if (isNaN(number))
+          return "Please enter numerical id!"
+
+        return true
+      }
     },
     {
       type: 'input',
       name: 'engineerEmail',
-      message: 'What is the Engineers email?'
+      message: 'What is the Engineers email?',
+      validate: (input) => {
+
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input)) {
+          return (true)
+        }
+        return "You have entered an invalid email address!"
+      }
+
     },
     {
       type: 'input',
       name: 'engineerGithub',
-      message: 'What is the Engineers Github user name?'
+      message: 'What is the Engineers Github user name?',
+      validate: (input) => {
+        if (input.length > 1)
+          return true;
+
+        return "Please enter a valid name!"
+
+      }
     }
   ])
     .then((answers) => {
@@ -153,22 +178,50 @@ promptIntern = () => {
     {
       type: 'input',
       name: 'internName',
-      message: 'What is the Interns name?'
+      message: 'What is the Interns name?',
+      validate: (input) => {
+        if (input.length > 1)
+          return true;
+
+        return "Please enter a valid name!"
+
+      }
+
     },
     {
       type: 'input',
       name: 'internId',
-      message: 'What is the Interns Id?'
+      message: 'What is the Interns Id?',
+      validate: (number) => {
+        if (isNaN(number))
+          return "Please enter numerical id!"
+
+        return true
+      }
     },
     {
       type: 'input',
       name: 'internEmail',
-      message: 'What is the Interns email?'
+      message: 'What is the Interns email?',
+      validate: (input) => {
+
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input)) {
+          return (true)
+        }
+        return "You have entered an invalid email address!"
+      }
     },
     {
       type: 'input',
       name: 'internSchool',
-      message: 'Where did the Intern attend school?'
+      message: 'Where did the Intern attend school?',
+      validate: (input) => {
+        if (input.length >= 1)
+          return true;
+
+        return "Please enter a valid name!"
+
+      }
     }
   ])
     .then((answers) => {
@@ -262,7 +315,7 @@ function createManagerCard(manager) {
     <div class="content">
       <p>Employee ID: ${manager.id}</p>
       <a target="_blank" href="mailto:${manager.email}">${manager.email}</a>
-      <p>Office Number: ${manager.officeNumber.slice(0,3) + "-" + manager.officeNumber.slice(3,6) + "-" + manager.officeNumber.slice(6)}</p>
+      <p>Office Number: ${manager.officeNumber.slice(0, 3) + "-" + manager.officeNumber.slice(3, 6) + "-" + manager.officeNumber.slice(6)}</p>
     </div>
   </div>
   </div>`
