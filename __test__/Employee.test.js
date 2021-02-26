@@ -10,14 +10,14 @@ test('can set an employee name', () => {
 
 test('can set an employee id', () => {
     const id = 1;
-    const employee = new Employee("", id, ""); // works just needed the empty placeholders
+    const employee = new Employee("", id, ""); 
 
-    expect(employee.getId()).toBe(1);
+    expect(employee.getId()).toBe(1); //compares Id
 })
 
 test('can set employee email', () => {
     const email = 'josephjlyons90@gmail.com';
     const employee = new Employee("", "" , email);
     
-    expect(employee.getEmail()).toBe('josephjlyons90@gmail.com');
+    expect(employee.getEmail()).toBe('josephjlyons90@gmail.com'); // compares Email
 })
