@@ -32,4 +32,13 @@
     background-color: #00F5F5 !important;
     color: white;
     font-family: fantasy;  
+    transition: transform .5s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgb(1, 25, 240);
 }
