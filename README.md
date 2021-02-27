@@ -6,7 +6,7 @@
 
 ## Application Video Walkthrough
 
-vide link goes here 
+[Walkthrough Video](https://drive.google.com/file/d/1X2T0CudRiVGA2jsm3vG3jM3ambzAPgnm/view?usp=sharing)
 
 ## Table of Contents
 
